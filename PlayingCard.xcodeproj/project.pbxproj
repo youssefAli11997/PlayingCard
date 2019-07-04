@@ -14,6 +14,11 @@
 		EB17F91422CDF8BB00079912 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EB17F91222CDF8BB00079912 /* LaunchScreen.storyboard */; };
 		EB17F91D22CDFAA700079912 /* PlayingCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB17F91C22CDFAA700079912 /* PlayingCard.swift */; };
 		EB17F91F22CE01EA00079912 /* PlayingCardDeck.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB17F91E22CE01EA00079912 /* PlayingCardDeck.swift */; };
+		EB17F92422CE1C7C00079912 /* PlayingCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB17F92222CE1ACC00079912 /* PlayingCardView.swift */; };
+		EB17F92722CE1D9500079912 /* Int_extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB17F92622CE1D9500079912 /* Int_extension.swift */; };
+		EB17F92922CE2A3E00079912 /* PlayingCardView_extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB17F92822CE2A3E00079912 /* PlayingCardView_extension.swift */; };
+		EB17F92B22CE2F7500079912 /* CGRect_extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB17F92A22CE2F7500079912 /* CGRect_extension.swift */; };
+		EB17F92D22CE2F9400079912 /* CGPoint_extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB17F92C22CE2F9400079912 /* CGPoint_extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +31,11 @@
 		EB17F91522CDF8BB00079912 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EB17F91C22CDFAA700079912 /* PlayingCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayingCard.swift; sourceTree = "<group>"; };
 		EB17F91E22CE01EA00079912 /* PlayingCardDeck.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayingCardDeck.swift; sourceTree = "<group>"; };
+		EB17F92222CE1ACC00079912 /* PlayingCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayingCardView.swift; sourceTree = "<group>"; };
+		EB17F92622CE1D9500079912 /* Int_extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Int_extension.swift; sourceTree = "<group>"; };
+		EB17F92822CE2A3E00079912 /* PlayingCardView_extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayingCardView_extension.swift; sourceTree = "<group>"; };
+		EB17F92A22CE2F7500079912 /* CGRect_extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CGRect_extension.swift; sourceTree = "<group>"; };
+		EB17F92C22CE2F9400079912 /* CGPoint_extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CGPoint_extension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -42,6 +52,7 @@
 		EB17F8FD22CDF8B900079912 = {
 			isa = PBXGroup;
 			children = (
+				EB17F92522CE1D4E00079912 /* Extensions */,
 				EB17F90822CDF8B900079912 /* PlayingCard */,
 				EB17F90722CDF8B900079912 /* Products */,
 			);
@@ -58,6 +69,7 @@
 		EB17F90822CDF8B900079912 /* PlayingCard */ = {
 			isa = PBXGroup;
 			children = (
+				EB17F92222CE1ACC00079912 /* PlayingCardView.swift */,
 				EB17F90B22CDF8B900079912 /* ViewController.swift */,
 				EB17F91C22CDFAA700079912 /* PlayingCard.swift */,
 				EB17F91E22CE01EA00079912 /* PlayingCardDeck.swift */,
@@ -76,6 +88,17 @@
 				EB17F91222CDF8BB00079912 /* LaunchScreen.storyboard */,
 			);
 			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		EB17F92522CE1D4E00079912 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				EB17F92622CE1D9500079912 /* Int_extension.swift */,
+				EB17F92822CE2A3E00079912 /* PlayingCardView_extension.swift */,
+				EB17F92A22CE2F7500079912 /* CGRect_extension.swift */,
+				EB17F92C22CE2F9400079912 /* CGPoint_extension.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -150,8 +173,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				EB17F90C22CDF8B900079912 /* ViewController.swift in Sources */,
+				EB17F92D22CE2F9400079912 /* CGPoint_extension.swift in Sources */,
 				EB17F91F22CE01EA00079912 /* PlayingCardDeck.swift in Sources */,
 				EB17F91D22CDFAA700079912 /* PlayingCard.swift in Sources */,
+				EB17F92922CE2A3E00079912 /* PlayingCardView_extension.swift in Sources */,
+				EB17F92422CE1C7C00079912 /* PlayingCardView.swift in Sources */,
+				EB17F92B22CE2F7500079912 /* CGRect_extension.swift in Sources */,
+				EB17F92722CE1D9500079912 /* Int_extension.swift in Sources */,
 				EB17F90A22CDF8B900079912 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
