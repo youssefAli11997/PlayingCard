@@ -8,8 +8,11 @@
 
 import UIKit
 
-@IBDesignable
+//@IBDesignable
 class PlayingCardView: UIView {
+
+    
+    @IBOutlet var playingCardView: UIView!
     
     var rank: Int = 5 { didSet { setNeedsDisplay(); setNeedsLayout() } }
     var suit: String = "♥️" { didSet { setNeedsDisplay(); setNeedsLayout() } }
@@ -24,10 +27,29 @@ class PlayingCardView: UIView {
     private lazy var upperLeftCornerLabel = createCornerLabel()
     private lazy var lowerRightCornerLabel = createCornerLabel()
     
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+        commonInit()
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+        commonInit()
+    }
+    
+    private func commonInit() {
+        print("\(#function)")
+        Bundle.main.loadNibNamed("PlayingCardView", owner: self, options: nil)
+        addSubview(playingCardView)
+        playingCardView.frame = self.bounds
+        playingCardView.autoresizingMask = [.flexibleHeight, .flexibleWidth]
+    }
+    
     private func createCornerLabel() -> UILabel {
+        print("\(#function)")
         let label = UILabel()
         label.numberOfLines = 0
-        addSubview(label)
+        playingCardView.addSubview(label)
         return label
     }
     
@@ -48,6 +70,7 @@ class PlayingCardView: UIView {
     }
     
     @objc func adjustFaceCardScale(byHandlingGestureRecoginzedBy recognizer: UIPinchGestureRecognizer) {
+        print("\(#function)")
         switch recognizer.state {
         case .changed, .ended:
             faceCardScale *= recognizer.scale
@@ -57,6 +80,7 @@ class PlayingCardView: UIView {
     }
     
     override func draw(_ rect: CGRect) {
+        print("\(#function)")
         let roundedRect = UIBezierPath(roundedRect: bounds, cornerRadius: cornerRadius)
         roundedRect.addClip()
         UIColor.white.setFill()
@@ -64,12 +88,18 @@ class PlayingCardView: UIView {
         
         if !isFaceUp {
             if let cardbackImage = UIImage(named: "cardback") {
+                print("Found the image!!!")
+                print(bounds)
                 cardbackImage.draw(in: bounds/*.zoom(by: faceCardScale)*/)
+            }
+            else{
+                print("Here!!!")
             }
         }
     }
     
     override func layoutSubviews() {
+        print("\(#function)")
         super.layoutSubviews()
         
         configureCornerLabel(upperLeftCornerLabel)
@@ -85,8 +115,12 @@ class PlayingCardView: UIView {
     
     // to handle changes such as system font size
     override func traitCollectionDidChange(_ previousTraitCollection: UITraitCollection?) {
-        setNeedsDisplay()
-        setNeedsLayout()
+        playingCardView.setNeedsDisplay()
+        playingCardView.setNeedsLayout()
     }
     
+    override func awakeFromNib() {
+        print("\(#function)")
+        super.awakeFromNib()
+    }
 }

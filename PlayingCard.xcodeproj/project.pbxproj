@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		EB009AED22D1DCDE0053C784 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EB17F90D22CDF8B900079912 /* Main.storyboard */; };
+		EB009AF722D1EED40053C784 /* PlayingCardView.xib in Resources */ = {isa = PBXBuildFile; fileRef = EB009AF622D1EED40053C784 /* PlayingCardView.xib */; };
 		EB17F90A22CDF8B900079912 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB17F90922CDF8B900079912 /* AppDelegate.swift */; };
 		EB17F90C22CDF8B900079912 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB17F90B22CDF8B900079912 /* ViewController.swift */; };
 		EB17F91122CDF8BB00079912 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EB17F91022CDF8BB00079912 /* Assets.xcassets */; };
@@ -22,6 +23,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		EB009AF622D1EED40053C784 /* PlayingCardView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PlayingCardView.xib; sourceTree = "<group>"; };
 		EB17F90622CDF8B900079912 /* PlayingCard.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PlayingCard.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EB17F90922CDF8B900079912 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EB17F90B22CDF8B900079912 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -69,6 +71,7 @@
 		EB17F90822CDF8B900079912 /* PlayingCard */ = {
 			isa = PBXGroup;
 			children = (
+				EB009AF622D1EED40053C784 /* PlayingCardView.xib */,
 				EB17F92222CE1ACC00079912 /* PlayingCardView.swift */,
 				EB17F90B22CDF8B900079912 /* ViewController.swift */,
 				EB17F91C22CDFAA700079912 /* PlayingCard.swift */,
@@ -162,6 +165,7 @@
 				EB009AED22D1DCDE0053C784 /* Main.storyboard in Resources */,
 				EB17F91422CDF8BB00079912 /* LaunchScreen.storyboard in Resources */,
 				EB17F91122CDF8BB00079912 /* Assets.xcassets in Resources */,
+				EB009AF722D1EED40053C784 /* PlayingCardView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
