@@ -12,27 +12,46 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="PlayingCard" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view opaque="NO" contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="zOy-Zb-Hhh" customClass="PlayingCardView" customModule="PlayingCard" customModuleProvider="target">
-                                <rect key="frame" x="16" y="20" width="343" height="627"/>
+                                <rect key="frame" x="16" y="69" width="343" height="549"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <gestureRecognizers/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="343" id="cJK-vb-FNQ"/>
+                                    <constraint firstAttribute="width" secondItem="zOy-Zb-Hhh" secondAttribute="height" multiplier="5:8" id="fF1-mq-1sc"/>
+                                </constraints>
                             </view>
                         </subviews>
                         <color key="backgroundColor" red="1" green="0.57637232540000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <gestureRecognizers/>
                         <constraints>
-                            <constraint firstItem="zOy-Zb-Hhh" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="5qY-UF-DGf"/>
-                            <constraint firstItem="zOy-Zb-Hhh" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="Dgm-Ob-FJa"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="zOy-Zb-Hhh" secondAttribute="bottom" constant="20" id="jSe-YD-7E3"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="zOy-Zb-Hhh" secondAttribute="trailing" constant="16" id="v9h-Ma-nHP"/>
+                            <constraint firstItem="zOy-Zb-Hhh" firstAttribute="top" relation="greaterThanOrEqual" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="16" id="5qY-UF-DGf"/>
+                            <constraint firstItem="zOy-Zb-Hhh" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="Age-ap-xsJ"/>
+                            <constraint firstItem="zOy-Zb-Hhh" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="Dgm-Ob-FJa"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="zOy-Zb-Hhh" secondAttribute="bottom" constant="16" id="jSe-YD-7E3"/>
+                            <constraint firstItem="zOy-Zb-Hhh" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="qOF-uy-xKo"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="zOy-Zb-Hhh" secondAttribute="trailing" constant="16" id="v9h-Ma-nHP"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="keg-Ar-ADx" appends="YES" id="gqB-gJ-7bI"/>
+                        </connections>
                     </view>
+                    <connections>
+                        <outlet property="playingCardView" destination="zOy-Zb-Hhh" id="L1k-Kr-foK"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="keg-Ar-ADx">
+                    <connections>
+                        <action selector="flipCard:" destination="BYZ-38-t0r" id="Yz3-a1-ZN8"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="133.59999999999999" y="133.5832083958021"/>
         </scene>

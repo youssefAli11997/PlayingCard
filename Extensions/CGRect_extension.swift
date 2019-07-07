@@ -26,7 +26,7 @@ extension CGRect {
         return CGRect(origin: origin, size: size)
     }
     
-    func zoom(bu scale: CGFloat) -> CGRect {
+    func zoom(by scale: CGFloat) -> CGRect {
         let newWidth = width * scale
         let newHeight = height * scale
         return insetBy(dx: (width - newWidth) / 2, dy: (height - newHeight) / 2)
